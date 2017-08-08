@@ -3,11 +3,15 @@ This is a demo showing how removing a property from an interface that is unused 
 Run build.bat for a demo.
 
 It will build a base class library. (Containing an internal interface called ITroubleInterface with a property called QueryContext. This interface is only used from an internal class that is never instanitated.)
+
 Build a derived class library. (It will not use ITroubleInterface as it's internal and not exposed on BaseClasses only public class)
+
 Build a console app
+
 Run the app.
 
 It will then comment out BaseClasses:ITroubleInterface:QueryContext (which is internal and only used by an internal class, not exposed publicly) and recompile BaseClasses.dll
+
 It will re-run the tester app and you will see the following exception:
 ```
 Unhandled Exception: System.TypeLoadException: Method 'get_QueryContext' in type 'DerivedClasses.UnrelatedClass' from assembly 'derivedclasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' does not have an implementation.
