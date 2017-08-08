@@ -1,0 +1,2 @@
+This is a demo showing how removing a property from an interface
+that is unused in the application can cause it to break.
