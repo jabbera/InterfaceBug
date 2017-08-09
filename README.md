@@ -1,6 +1,6 @@
 This is a demo showing how removing a property from an interface that is unused in the application can cause it to break on a class that is not derived from directly or indirectly from said interface. (This sounds crazy..... I can't belive it's true)
 
-Run build.bat for a demo.
+Run build.bat from a VS2017 command prompt for a demo.
 
 It will build a base class library. (Containing an internal interface called ITroubleInterface with a property called QueryContext. This interface is only used from an internal class that is never instanitated.)
 
